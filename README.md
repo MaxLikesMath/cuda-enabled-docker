@@ -1,2 +1,2 @@
 # cuda-enabled-docker
-A Dockerfile for building CUDA enabled apps. 
+A Dockerfile for building CUDA enabled apps. It was a pain getting Pytorch to run from a container for an app and use GPUs at inference time in the configuration I needed. So, once I figured it out I figured there might be some other people looking for something similar. Essentially, create your folder you want to turn into a container, make your requirements.txt file, make sure the FROM at the start of the Dockerfile has the correct Ubuntu and CUDA version for your application and you run docker run --runtime=nvidia imagename and everything should work.
